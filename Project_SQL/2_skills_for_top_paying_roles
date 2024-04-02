@@ -1,0 +1,365 @@
+WITH top_paying_spain_jobs AS (
+    SELECT 
+        job_id,
+        job_title,
+        job_location,
+        salary_year_avg,
+        name AS company_name
+    FROM    
+        job_postings_fact
+    LEFT JOIN company_dim on job_postings_fact.company_id = company_dim.company_id
+    WHERE job_location LIKE '%Spain' AND job_title_short = 'Data Analyst' AND salary_year_avg IS NOT NULL
+    ORDER BY salary_year_avg DESC
+    LIMIT 10
+)
+
+SELECT top_paying_spain_jobs.*,
+        skills_dim.skills
+FROM top_paying_spain_jobs
+INNER JOIN skills_job_dim ON top_paying_spain_jobs.job_id = skills_job_dim.job_id
+INNER JOIN skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
+ORDER BY salary_year_avg DESC
+
+/*Here's the breakdown of the most demanded skills for data analysts in Spain, based on job postings in 2023:
+SQL: 8 occurrences
+Python: 7 occurrences
+Pandas: 5 occurrences
+Tableau: 4 occurrences
+Looker: 4 occurrences
+Excel: 2 occurrences
+R: 1 occurrence
+Databricks: 1 occurrence
+Numpy: 1 occurrence
+Airflow: 1 occurrence
+Scikit-learn: 1 occurrence
+Smartsheet: 1 occurrence
+SAP: 1 occurrence
+Power BI: 1 occurrence
+React: 1 occurrence
+
+[
+  {
+    "job_id": 495042,
+    "job_title": "Fleet Monitoring Analytics Engineer",
+    "job_location": "Spain",
+    "salary_year_avg": "155000.0",
+    "company_name": "Capgemini",
+    "skills": "python"
+  },
+  {
+    "job_id": 495042,
+    "job_title": "Fleet Monitoring Analytics Engineer",
+    "job_location": "Spain",
+    "salary_year_avg": "155000.0",
+    "company_name": "Capgemini",
+    "skills": "smartsheet"
+  },
+  {
+    "job_id": 1786626,
+    "job_title": "Senior Global People Data Analyst",
+    "job_location": "Spain",
+    "salary_year_avg": "118640.0",
+    "company_name": "Allianz",
+    "skills": "sap"
+  },
+  {
+    "job_id": 1786626,
+    "job_title": "Senior Global People Data Analyst",
+    "job_location": "Spain",
+    "salary_year_avg": "118640.0",
+    "company_name": "Allianz",
+    "skills": "flow"
+  },
+  {
+    "job_id": 1284234,
+    "job_title": "Confirmed Product Data Analyst",
+    "job_location": "Barcelona, Spain",
+    "salary_year_avg": "111175.0",
+    "company_name": "PayFit",
+    "skills": "sql"
+  },
+  {
+    "job_id": 1284234,
+    "job_title": "Confirmed Product Data Analyst",
+    "job_location": "Barcelona, Spain",
+    "salary_year_avg": "111175.0",
+    "company_name": "PayFit",
+    "skills": "python"
+  },
+  {
+    "job_id": 1284234,
+    "job_title": "Confirmed Product Data Analyst",
+    "job_location": "Barcelona, Spain",
+    "salary_year_avg": "111175.0",
+    "company_name": "PayFit",
+    "skills": "go"
+  },
+  {
+    "job_id": 1284234,
+    "job_title": "Confirmed Product Data Analyst",
+    "job_location": "Barcelona, Spain",
+    "salary_year_avg": "111175.0",
+    "company_name": "PayFit",
+    "skills": "looker"
+  },
+  {
+    "job_id": 1019193,
+    "job_title": "Data Analyst",
+    "job_location": "Madrid, Spain",
+    "salary_year_avg": "111175.0",
+    "company_name": "Publicis Groupe",
+    "skills": "sql"
+  },
+  {
+    "job_id": 1019193,
+    "job_title": "Data Analyst",
+    "job_location": "Madrid, Spain",
+    "salary_year_avg": "111175.0",
+    "company_name": "Publicis Groupe",
+    "skills": "excel"
+  },
+  {
+    "job_id": 1019193,
+    "job_title": "Data Analyst",
+    "job_location": "Madrid, Spain",
+    "salary_year_avg": "111175.0",
+    "company_name": "Publicis Groupe",
+    "skills": "tableau"
+  },
+  {
+    "job_id": 1629093,
+    "job_title": "Data Analyst (Reporting and Insights)",
+    "job_location": "Barcelona, Spain",
+    "salary_year_avg": "111175.0",
+    "company_name": "Netcentric",
+    "skills": "power bi"
+  },
+  {
+    "job_id": 1629093,
+    "job_title": "Data Analyst (Reporting and Insights)",
+    "job_location": "Barcelona, Spain",
+    "salary_year_avg": "111175.0",
+    "company_name": "Netcentric",
+    "skills": "looker"
+  },
+  {
+    "job_id": 1637806,
+    "job_title": "Data Analyst Coches.net",
+    "job_location": "Barcelona, Spain",
+    "salary_year_avg": "111175.0",
+    "company_name": "Adevinta",
+    "skills": "sql"
+  },
+  {
+    "job_id": 1637806,
+    "job_title": "Data Analyst Coches.net",
+    "job_location": "Barcelona, Spain",
+    "salary_year_avg": "111175.0",
+    "company_name": "Adevinta",
+    "skills": "python"
+  },
+  {
+    "job_id": 1637806,
+    "job_title": "Data Analyst Coches.net",
+    "job_location": "Barcelona, Spain",
+    "salary_year_avg": "111175.0",
+    "company_name": "Adevinta",
+    "skills": "r"
+  },
+  {
+    "job_id": 1637806,
+    "job_title": "Data Analyst Coches.net",
+    "job_location": "Barcelona, Spain",
+    "salary_year_avg": "111175.0",
+    "company_name": "Adevinta",
+    "skills": "databricks"
+  },
+  {
+    "job_id": 1637806,
+    "job_title": "Data Analyst Coches.net",
+    "job_location": "Barcelona, Spain",
+    "salary_year_avg": "111175.0",
+    "company_name": "Adevinta",
+    "skills": "pandas"
+  },
+  {
+    "job_id": 1637806,
+    "job_title": "Data Analyst Coches.net",
+    "job_location": "Barcelona, Spain",
+    "salary_year_avg": "111175.0",
+    "company_name": "Adevinta",
+    "skills": "numpy"
+  },
+  {
+    "job_id": 1637806,
+    "job_title": "Data Analyst Coches.net",
+    "job_location": "Barcelona, Spain",
+    "salary_year_avg": "111175.0",
+    "company_name": "Adevinta",
+    "skills": "airflow"
+  },
+  {
+    "job_id": 1637806,
+    "job_title": "Data Analyst Coches.net",
+    "job_location": "Barcelona, Spain",
+    "salary_year_avg": "111175.0",
+    "company_name": "Adevinta",
+    "skills": "scikit-learn"
+  },
+  {
+    "job_id": 1637806,
+    "job_title": "Data Analyst Coches.net",
+    "job_location": "Barcelona, Spain",
+    "salary_year_avg": "111175.0",
+    "company_name": "Adevinta",
+    "skills": "matplotlib"
+  },
+  {
+    "job_id": 1637806,
+    "job_title": "Data Analyst Coches.net",
+    "job_location": "Barcelona, Spain",
+    "salary_year_avg": "111175.0",
+    "company_name": "Adevinta",
+    "skills": "tableau"
+  },
+  {
+    "job_id": 1637806,
+    "job_title": "Data Analyst Coches.net",
+    "job_location": "Barcelona, Spain",
+    "salary_year_avg": "111175.0",
+    "company_name": "Adevinta",
+    "skills": "word"
+  },
+  {
+    "job_id": 848502,
+    "job_title": "Data Analyst",
+    "job_location": "Barcelona, Spain",
+    "salary_year_avg": "111175.0",
+    "company_name": "Netcentric",
+    "skills": "sql"
+  },
+  {
+    "job_id": 848502,
+    "job_title": "Data Analyst",
+    "job_location": "Barcelona, Spain",
+    "salary_year_avg": "111175.0",
+    "company_name": "Netcentric",
+    "skills": "react"
+  },
+  {
+    "job_id": 848502,
+    "job_title": "Data Analyst",
+    "job_location": "Barcelona, Spain",
+    "salary_year_avg": "111175.0",
+    "company_name": "Netcentric",
+    "skills": "angular"
+  },
+  {
+    "job_id": 848502,
+    "job_title": "Data Analyst",
+    "job_location": "Barcelona, Spain",
+    "salary_year_avg": "111175.0",
+    "company_name": "Netcentric",
+    "skills": "node.js"
+  },
+  {
+    "job_id": 848502,
+    "job_title": "Data Analyst",
+    "job_location": "Barcelona, Spain",
+    "salary_year_avg": "111175.0",
+    "company_name": "Netcentric",
+    "skills": "looker"
+  },
+  {
+    "job_id": 848502,
+    "job_title": "Data Analyst",
+    "job_location": "Barcelona, Spain",
+    "salary_year_avg": "111175.0",
+    "company_name": "Netcentric",
+    "skills": "qlik"
+  },
+  {
+    "job_id": 848502,
+    "job_title": "Data Analyst",
+    "job_location": "Barcelona, Spain",
+    "salary_year_avg": "111175.0",
+    "company_name": "Netcentric",
+    "skills": "npm"
+  },
+  {
+    "job_id": 1010017,
+    "job_title": "Data Analyst (Procurement)",
+    "job_location": "Valencia, Spain",
+    "salary_year_avg": "111175.0",
+    "company_name": "Octopus Energy",
+    "skills": "sql"
+  },
+  {
+    "job_id": 1010017,
+    "job_title": "Data Analyst (Procurement)",
+    "job_location": "Valencia, Spain",
+    "salary_year_avg": "111175.0",
+    "company_name": "Octopus Energy",
+    "skills": "python"
+  },
+  {
+    "job_id": 1010017,
+    "job_title": "Data Analyst (Procurement)",
+    "job_location": "Valencia, Spain",
+    "salary_year_avg": "111175.0",
+    "company_name": "Octopus Energy",
+    "skills": "pandas"
+  },
+  {
+    "job_id": 1010017,
+    "job_title": "Data Analyst (Procurement)",
+    "job_location": "Valencia, Spain",
+    "salary_year_avg": "111175.0",
+    "company_name": "Octopus Energy",
+    "skills": "numpy"
+  },
+  {
+    "job_id": 1010017,
+    "job_title": "Data Analyst (Procurement)",
+    "job_location": "Valencia, Spain",
+    "salary_year_avg": "111175.0",
+    "company_name": "Octopus Energy",
+    "skills": "jupyter"
+  },
+  {
+    "job_id": 52721,
+    "job_title": "Data Analyst",
+    "job_location": "Spain",
+    "salary_year_avg": "105000.0",
+    "company_name": "Octopus Energy",
+    "skills": "python"
+  },
+  {
+    "job_id": 52721,
+    "job_title": "Data Analyst",
+    "job_location": "Spain",
+    "salary_year_avg": "105000.0",
+    "company_name": "Octopus Energy",
+    "skills": "pandas"
+  },
+  {
+    "job_id": 52721,
+    "job_title": "Data Analyst",
+    "job_location": "Spain",
+    "salary_year_avg": "105000.0",
+    "company_name": "Octopus Energy",
+    "skills": "jupyter"
+  },
+  {
+    "job_id": 52721,
+    "job_title": "Data Analyst",
+    "job_location": "Spain",
+    "salary_year_avg": "105000.0",
+    "company_name": "Octopus Energy",
+    "skills": "spreadsheet"
+  }
+]
+*/
+
+
+

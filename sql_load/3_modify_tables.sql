@@ -41,4 +41,4 @@ COPY skills_job_dim
 FROM 'C:\Users\Lucia\Data Things\SQL_PROJECT_DATA_JOB_ANALYSIS\csv_files\skills_job_dim.csv'
 WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 
-SELECT * FROM company_dim LIMIT 100
+SELECT * FROM skills_job_dim LIMIT 100
