@@ -103,7 +103,7 @@ LIMIT 5;
 | Excel       | 1315         |
 | Power BI    | 1269         |
 | Tableau     | 1042         |
----
+<!-- End of table -->
 *Table of the demand for the top 5 skills in data analyst job postings in Spain.*
 
 ### 4. Skills Based on Salary
@@ -146,7 +146,7 @@ Here's a breakdown of the results for top paying skills for Data Analysts:
 | spreadsheet  | 101750         |
 | mysql        | 100500         |
 | qlik         | 100190         |
----
+<!-- End of table -->
 *Table of the average salary for the top 10 paying skills for data analysts.*
 
 
@@ -210,7 +210,7 @@ LIMIT 25;
 | 1            | python       |               15 |          95615 |
 | 215          | flow         |                2 |          95770 |
 | 96           | airflow      |                3 |          96842 |
----
+<!-- End of table -->
 *Table of the most optimal skills for data analysts sorted by salary*
 
 Here's a breakdown of the most optimal skills for Data Analysts in Spain in 2023:
