@@ -76,10 +76,10 @@ ORDER BY salary_year_avg DESC
 Here's the breakdown of the most demanded skills for the top 10 highest paying data analyst jobs in Spain for 2023:
 
 1. **SQL & Python:** Are tied and leading the overall count, with 5 occurrences each.
-3. **Pandas & Looker:** follows SQL & Python with 3 occurrences each.
+2. **Pandas & Looker:** follows SQL & Python with 3 occurrences each.
 
 
-![Skills for top-paying roles](/Project_SQL\assets\skillcounttop10.png)
+![Skills for top-paying roles](Project_SQL\assets\skill_count_top.png)
 *Bar graph visualizing the count of skills for the top 10 paying jobs for data analysts in Spain; ChatGPT generated this graph from my SQL query results.*
 
 ### 3. In-Demand Skills for Data Analysts
@@ -146,6 +146,7 @@ Here's a breakdown of the results for top paying skills for Data Analysts:
 | spreadsheet  | 101750         |
 | mysql        | 100500         |
 | qlik         | 100190         |
+
 *Table of the average salary for the top 10 paying skills for data analysts.*
 
 
@@ -182,33 +183,34 @@ ORDER BY avg_salary, demand_count DESC
 LIMIT 25;
 ```
 
-|skill_id | skills   |   demand_count |   avg_salary |
-|:-----------|:---------|---------------:|-------------:|
-| 198        | outlook  |              1 |        57500 |
-| 154        | node     |              1 |        57500 |
-| 78         | redshift |              1 |        57500 |
-| 22         | vba      |              1 |        57500 |
-| 204        | visio    |              1 |        72900 |
-| 196        | powerpoint |            1 |        72900 |
-| 183        | power bi |              4 |        78845 |
-| 181        | excel    |              5 |        79515 |
-| 188        | word     |              3 |        80525 |
-| 4          | java     |              1 |        80850 |
-| 214        | docker   |              1 |        80850 |
-| 92         | spark    |              1 |        80850 |
-| 98         | kafka    |              1 |        80850 |
-| 15         | matlab   |              1 |        80850 |
-| 76         | aws      |              1 |        80850 |
-| 0          | sql      |             17 |        88916 |
-| 210        | git      |              2 |        89100 |
-| 220        | gitlab   |              1 |        89100 |
-| 77         | bigquery |              1 |        89100 |
-| 182        | tableau  |              9 |        90250 |
-| 74         | azure    |              2 |        91925 |
-| 80         | snowflake |             3 |        92233 |
-| 1          | python   |             15 |        95615 |
-| 215        | flow     |              2 |        95770 |
-| 96         | airflow  |              3 |        96842 |
+| **skill_id** | **skills**   | **demand_count** | **avg_salary** |
+|:------------:|:------------:|-----------------:|---------------:|
+| 198          | outlook      |                1 |          57500 |
+| 154          | node         |                1 |          57500 |
+| 78           | redshift     |                1 |          57500 |
+| 22           | vba          |                1 |          57500 |
+| 204          | visio        |                1 |          72900 |
+| 196          | powerpoint   |                1 |          72900 |
+| 183          | power bi     |                4 |          78845 |
+| 181          | excel        |                5 |          79515 |
+| 188          | word         |                3 |          80525 |
+| 4            | java         |                1 |          80850 |
+| 214          | docker       |                1 |          80850 |
+| 92           | spark        |                1 |          80850 |
+| 98           | kafka        |                1 |          80850 |
+| 15           | matlab       |                1 |          80850 |
+| 76           | aws          |                1 |          80850 |
+| 0            | sql          |               17 |          88916 |
+| 210          | git          |                2 |          89100 |
+| 220          | gitlab       |                1 |          89100 |
+| 77           | bigquery     |                1 |          89100 |
+| 182          | tableau      |                9 |          90250 |
+| 74           | azure        |                2 |          91925 |
+| 80           | snowflake    |                3 |          92233 |
+| 1            | python       |               15 |          95615 |
+| 215          | flow         |                2 |          95770 |
+| 96           | airflow      |                3 |          96842 |
+
 *Table of the most optimal skills for data analysts sorted by salary*
 
 Here's a breakdown of the most optimal skills for Data Analysts in Spain in 2023:
