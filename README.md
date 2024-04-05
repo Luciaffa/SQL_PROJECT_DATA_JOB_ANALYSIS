@@ -79,7 +79,7 @@ Here's the breakdown of the most demanded skills for the top 10 highest paying d
 2. **Pandas & Looker:** follows SQL & Python with 3 occurrences each.
 
 
-![Skills for top-paying roles](Project_SQL\assets\skill_count_top.png)
+![Skills for top-paying roles](https://github.com/Luciaffa/SQL_PROJECT_DATA_JOB_ANALYSIS/blob/main/Project_SQL/assets/skill_count_top.png?raw=true)
 *Bar graph visualizing the count of skills for the top 10 paying jobs for data analysts in Spain; ChatGPT generated this graph from my SQL query results.*
 
 ### 3. In-Demand Skills for Data Analysts
