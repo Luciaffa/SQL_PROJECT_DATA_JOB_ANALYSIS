@@ -24,4 +24,14 @@ SELECT skills_demand.skill_id,
 FROM skills_demand
 INNER JOIN avarage_salary ON skills_demand.skill_id = avarage_salary.skill_id
 ORDER BY avg_salary, demand_count DESC
-LIMIT 25
+LIMIT 25;
+
+/*Programming Languages and Querying:
+Essential skills for data manipulation and analysis.
+Proficiency in languages like Python and SQL is highly sought after.
+Data Visualization Tools:
+Tableau and Power BI are powerful tools for creating insightful visualizations.
+Professionals skilled in these tools are well-compensated.
+Data Warehousing and Cloud Solutions:
+Skills related to platforms like Redshift and Snowflake are in demand.
+Cloud-based solutions for data storage and analytics are on the rise.

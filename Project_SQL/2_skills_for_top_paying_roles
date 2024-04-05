@@ -21,21 +21,20 @@ INNER JOIN skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
 ORDER BY salary_year_avg DESC
 
 /*Here's the breakdown of the most demanded skills for data analysts in Spain, based on job postings in 2023:
-SQL: 8 occurrences
-Python: 7 occurrences
-Pandas: 5 occurrences
-Tableau: 4 occurrences
-Looker: 4 occurrences
-Excel: 2 occurrences
-R: 1 occurrence
-Databricks: 1 occurrence
-Numpy: 1 occurrence
-Airflow: 1 occurrence
-Scikit-learn: 1 occurrence
+SQL: 5 occurrences
+Python: 5 occurrences
+Pandas: 3 occurrences
+Looker: 3 occurrences
+Tableau: 2 occurrences
+Numpy: 2 occurrences
 Smartsheet: 1 occurrence
 SAP: 1 occurrence
+Flow: 1 occurrence
+Excel: 1 occurrence
+Go: 1 occurrence
 Power BI: 1 occurrence
-React: 1 occurrence
+R: 1 occurrence
+Databricks: 1 occurrence
 
 [
   {

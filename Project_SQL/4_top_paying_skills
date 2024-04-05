@@ -10,30 +10,10 @@ LIMIT 25;
 
 
 /*here are the key insights summarized into 5 bullet points:
-
-Data Visualization Tools: Tableau, Matplotlib, and Looker skills are in demand, highlighting the importance of visualizing insights effectively.
-
-Python Proficiency: Python, along with libraries like Pandas and Scikit-learn, is crucial for data manipulation and machine learning tasks.
-
-Cloud-Based Platforms: Databricks and Snowflake skills indicate the growing adoption of cloud-based data management and analytics solutions.
-
-Web Development Technologies: Angular, React, and Node.js are sought-after skills for building web-based data applications and interfaces.
-
-Business Intelligence Tools: Qlik and Looker proficiency underscores the need for professionals who can utilize BI tools for data analysis and reporting purposes.
+SQL Dominance: SQL remains a foundational skill, with 2369 job postings. Its importance persists due to its role in data querying, manipulation, and management.
+Python’s Rise: Python is a close second, with 1666 job postings. Its versatility, libraries (such as Pandas and NumPy), and ease of use contribute to its popularity.
+Excel’s Relevance: Despite being a classic tool, Excel maintains its significance, with 1315 job postings. Data analysts often use it for data cleaning, visualization, and basic analysis.
+Visualization Tools: Power BI (1269 postings) and Tableau (1042 postings) are in demand. Companies seek professionals who can create compelling visualizations and dashboards.
 
 
 
-Here are brief explanations of each of the top 5 skills contributing to higher salaries for data analysts in Spain:
-
-Smartsheet: Smartsheet is a cloud-based platform that allows teams to collaborate, manage, and automate work processes through spreadsheets. Proficiency in Smartsheet likely indicates expertise in project management and workflow optimization.
-
-SAP: SAP (Systems, Applications, and Products in Data Processing) is an enterprise resource planning (ERP) software widely used for managing business operations and customer relations. Proficiency in SAP often involves knowledge of various modules within the SAP ecosystem, such as finance, logistics, and human resources.
-
-Scikit-learn: Scikit-learn is a popular machine learning library in Python used for data mining and data analysis tasks. Proficiency in Scikit-learn indicates expertise in building and deploying machine learning models for predictive analytics and pattern recognition.
-
-NPM (Node Package Manager): NPM is the default package manager for Node.js, a JavaScript runtime environment. Proficiency in NPM suggests familiarity with managing and installing packages and dependencies for Node.js projects, which are commonly used in web development and data processing tasks.
-
-Angular: Angular is a widely-used front-end web application framework maintained by Google. Proficiency in Angular indicates the ability to develop single-page applications (SPAs) and dynamic web interfaces, which are often used for displaying and interacting with data in web-based analytics platforms.
-
-These skills reflect a diverse range of expertise spanning project management, enterprise software, machine learning, web development, and data analysis, all of which are valued in the data analyst profession
-*/
